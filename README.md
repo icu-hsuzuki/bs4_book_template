@@ -1,6 +1,5 @@
-# Welcome to ECO Book! ようこそ
+# Welcome to bs4_book_template! ようこそ
 
-経済関係のデータサイエンスの内容を書いていきます。
 
 This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
 
@@ -13,5 +12,4 @@ Additional resources:
 The **bookdown** book: https://bookdown.org/yihui/bookdown/
 
 The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
-# eco-book
-# bs4_book_template
+

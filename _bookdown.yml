@@ -1,4 +1,4 @@
-book_filename: "eco-book"
+book_filename: "bs4_book_template"
 output_dir: docs
 new_session: true
 before_chapter_script: _common.R
