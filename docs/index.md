@@ -17,41 +17,33 @@ csl: chicago-fullnote-bibliography.csl
 
 # About this book
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+Please read the last chapter for the usage and other information included in the original template in English. 
 
-## Usage 
+In the following we add comments in Japanese.
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+## 日本語版テンプレートについて
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+[GitHub レポジトリ](https://github.com/icu-hsuzuki/bs4_book_template) の、README を参照してください。
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+最初に、変更すべき点を以下に書きます。
 
-## Render book
+1. README.md を、ご自分の本にあうように書き換えてください。このテンプレートのリポジトリに、README はありますので、必要な時は参照してください。
 
-You can render the HTML version of this example book without changing anything:
+2. `bookdown.yml` の最初の行、`book_filename: "bs4_book_template"` を、書き換えてください。現在は、リポジトリの名前になっています。
 
-1. Find the **Build** pane in the RStudio IDE, and
+3. `output.yml` の５行目の、`repo: https://github.com/icu-hsuzuki/bs4_book_template
+` を、ご自分のリポジトリのアドレスに変更して下さい。`bs4_book` のスタイルでは、このアドレスが、左の帯の一番下に表示され、リポジトリにリンクされます。
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+4. `index.html` には、YAML と呼ばれる、設定が、書かれていますが、まず、title と author がありますから、それらを、ご自身の本のタイトルと、ご自身の名前に変更してください。
 
-Or build the book from the R console:
+5. `url` と `cover-image` が、コメントアウトされています。`url` は、リポジトリのアドレスではなく、公開される、サイトのアドレスです。`cover-image` はなければ、加える必要はありません。
 
+6. `description` を、ご自身の本にあう形に、書き換えてください。
 
-```r
-bookdown::render_book()
-```
+7. index.Rmd と、01-intro.Rmd から書き換えていってください。大枠が決まるまでは、わたしは、01-intro.Rmd, 11-part2.Rmd などと、すこし、間をあけて、番号をふったファイルを作り、書いていっています。章番号は、順番は変えずに、自動的に続き番号になります。むろん、あとから、変更することも可能ですが、`docs` 内に、さまざまなファイルが生成されますので、ある程度、計画的に、ファイルを作成していった方がよいように思います。
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+### 備考
 
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-
-```r
-bookdown::serve_book()
-```
-
-
-
+* 章や節に、ラベルはつける必要はありませんが、日本語の場合には、リンクが特殊文字を含む形式になりますので、99-bookdown.Rmd の章にあるように、少なくとも、章のラベルは、英数でつけておくことをお勧めします。
+* `bookdown` の本に何度も書かれていますが、PDF や、ePub は、ページの概念があり、複雑ですから、まず、基本的な内容を書き終わるまでは、output.yml の bookdown::pdf_book 以下の行をすべて、コメントアウトし（RStudio の場合は、ハイライトさせ、メニューバーの Code の Comment/Uncomment Lines を使えば、簡単にできます。）Book の build の時間も短くなります。
+* PDF を作成するときには、必要に応じて、`preamble.tex` に、情報を加えたり、フォントを追加してください。

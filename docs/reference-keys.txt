@@ -2,13 +2,12 @@ fig:nice-fig
 tab:nice-tab
 eq:binom
 about-this-book
-usage
-render-book
-preview-book
-hello-bookdown
+日本語版テンプレートについて
+備考
+introduction
 a-section
 bookdown
-hello-bookdown-1
+hello-bookdown
 a-section-1
 cross
 chapters-and-sub-chapters

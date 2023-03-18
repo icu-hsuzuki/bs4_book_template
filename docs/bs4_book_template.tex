@@ -150,60 +150,63 @@
 \hypertarget{about-this-book}{%
 \section{About this book}\label{about-this-book}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
+Please read the last chapter for the usage and other information included in the original template in English.
 
-\hypertarget{usage}{%
-\subsection{Usage}\label{usage}}
+In the following we add comments in Japanese.
 
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+\hypertarget{ux65e5ux672cux8a9eux7248ux30c6ux30f3ux30d7ux30ecux30fcux30c8ux306bux3064ux3044ux3066}{%
+\subsection{日本語版テンプレートについて}\label{ux65e5ux672cux8a9eux7248ux30c6ux30f3ux30d7ux30ecux30fcux30c8ux306bux3064ux3044ux3066}}
 
-Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+\href{https://github.com/icu-hsuzuki/bs4_book_template}{GitHub レポジトリ} の、README を参照してください。
 
-The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
-
-\hypertarget{render-book}{%
-\subsection{Render book}\label{render-book}}
-
-You can render the HTML version of this example book without changing anything:
+最初に、変更すべき点を以下に書きます。
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Find the \textbf{Build} pane in the RStudio IDE, and
+  README.md を、ご自分の本にあうように書き換えてください。このテンプレートのリポジトリに、README はありますので、必要な時は参照してください。
 \item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
+  \texttt{bookdown.yml} の最初の行、\texttt{book\_filename:\ "bs4\_book\_template"} を、書き換えてください。現在は、リポジトリの名前になっています。
+\item
+  \texttt{output.yml} の５行目の、\texttt{repo:\ https://github.com/icu-hsuzuki/bs4\_book\_template} を、ご自分のリポジトリのアドレスに変更して下さい。\texttt{bs4\_book} のスタイルでは、このアドレスが、左の帯の一番下に表示され、リポジトリにリンクされます。
+\item
+  \texttt{index.html} には、YAML と呼ばれる、設定が、書かれていますが、まず、title と author がありますから、それらを、ご自身の本のタイトルと、ご自身の名前に変更してください。
+\item
+  \texttt{url} と \texttt{cover-image} が、コメントアウトされています。\texttt{url} は、リポジトリのアドレスではなく、公開される、サイトのアドレスです。\texttt{cover-image} はなければ、加える必要はありません。
+\item
+  \texttt{description} を、ご自身の本にあう形に、書き換えてください。
+\item
+  index.Rmd と、01-intro.Rmd から書き換えていってください。大枠が決まるまでは、わたしは、01-intro.Rmd, 11-part2.Rmd などと、すこし、間をあけて、番号をふったファイルを作り、書いていっています。章番号は、順番は変えずに、自動的に続き番号になります。むろん、あとから、変更することも可能ですが、\texttt{docs} 内に、さまざまなファイルが生成されますので、ある程度、計画的に、ファイルを作成していった方がよいように思います。
 \end{enumerate}
 
-Or build the book from the R console:
+\hypertarget{ux5099ux8003}{%
+\subsubsection{備考}\label{ux5099ux8003}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\begin{itemize}
+\tightlist
+\item
+  章や節に、ラベルはつける必要はありませんが、日本語の場合には、リンクが特殊文字を含む形式になりますので、99-bookdown.Rmd の章にあるように、少なくとも、章のラベルは、英数でつけておくことをお勧めします。
+\item
+  \texttt{bookdown} の本に何度も書かれていますが、PDF や、ePub は、ページの概念があり、複雑ですから、まず、基本的な内容を書き終わるまでは、output.yml の bookdown::pdf\_book 以下の行をすべて、コメントアウトし（RStudio の場合は、ハイライトさせ、メニューバーの Code の Comment/Uncomment Lines を使えば、簡単にできます。）Book の build の時間も短くなります。
+\item
+  PDF を作成するときには、必要に応じて、\texttt{preamble.tex} に、情報を加えたり、フォントを追加してください。
+\end{itemize}
 
-To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
-
-\hypertarget{preview-book}{%
-\subsection{Preview book}\label{preview-book}}
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{hello-bookdown}{%
-\section{Hello bookdown}\label{hello-bookdown}}
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+
+すべての、章は、シャープ一つの第一レベルの見出しからはじめ、ひとつの .Rmd ファイルには、第一レベルの見出しは一つとなっています。
+
+次のレベルは、節で、シャープ二つとなります。ラベルはつけなくても、節名などから、自動的に、作成されますが、日本語の場合には、特殊文字なども含まれるので、あとで、引用することを考えて、わたしは、少なくとも章については、英数でラベルをつけておくことにしています。
 
 \hypertarget{a-section}{%
 \subsection{A section}\label{a-section}}
 
 All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+
+節番号などをつけたくない時は、次の行のようにします。
 
 \hypertarget{an-unnumbered-section}{%
 \subsubsection*{An unnumbered section}\label{an-unnumbered-section}}
@@ -214,8 +217,8 @@ Chapters and sections are numbered by default. To un-number a heading, add a \te
 \hypertarget{bookdown}{%
 \section{Bookdown}\label{bookdown}}
 
-\hypertarget{hello-bookdown-1}{%
-\subsection{Hello bookdown}\label{hello-bookdown-1}}
+\hypertarget{hello-bookdown}{%
+\subsection{Hello bookdown}\label{hello-bookdown}}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
 
