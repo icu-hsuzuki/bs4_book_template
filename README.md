@@ -29,6 +29,13 @@ The contents inside the .Rmd files provide some pointers to help you get started
 3. 自分のアカウントの中に、コピーされたリポジトリーがつくられます。
 4. [データサイエンスを始めましょう：IT ツール](https://icu-hsuzuki.github.io/ds4aj/tools.html#tools) を参照してください。
 
+もし、IPA フォントに関してインストールされていないと表示されたら、次のコードを、Console で実行してください。
+
+```
+# if error on ipa fonts
+tinytex::tlmgr_install("ipaex")
+```
+
 
 ## 参考文献 Additional resources:
 

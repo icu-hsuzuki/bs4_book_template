@@ -1,7 +1,7 @@
 --- 
 title: "BS4 Book Template"
 author: "Hiroshi Suzuki"
-date: "2023-03-18"
+date: "2023-03-24"
 site: bookdown::bookdown_site
 documentclass: bxjsbook #book
 bibliography: [book.bib, packages.bib]

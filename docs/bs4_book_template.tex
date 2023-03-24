@@ -101,9 +101,12 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\usepackage{ctex}
-
-\renewcommand{\contentsname}{目次}
+\usepackage{xeCJK}
+%\setCJKmainfont{Hiragino Mincho Pro} %mac user で Hiragino が好きならば 最初の % を外す
+\setCJKmainfont{ipaexm.ttf}
+\setCJKsansfont{ipaexg.ttf}
+\setCJKmonofont{ipaexg.ttf}
+%\renewcommand{\contentsname}{目次}
 
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -121,7 +124,7 @@
 
 \title{BS4 Book Template}
 \author{Hiroshi Suzuki}
-\date{2023-03-18}
+\date{2023-03-24}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
