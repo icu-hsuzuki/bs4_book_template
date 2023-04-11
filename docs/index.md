@@ -1,9 +1,10 @@
 --- 
 title: "BS4 Book Template"
 author: "Hiroshi Suzuki"
-date: "2023-03-24"
+date: "2023-04-11"
 site: bookdown::bookdown_site
 documentclass: bxjsbook #book
+classoption: xelatex, ja=standard
 bibliography: [book.bib, packages.bib]
 # url: https://icu-hsuzuki.github.io/eco-book/
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -13,6 +14,7 @@ description: |
   set in the _output.yml file.
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
+biblio-title: "参考文献"
 ---
 
 # About this book

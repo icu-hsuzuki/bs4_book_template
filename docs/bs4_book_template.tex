@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{bxjsbook}
+  xelatex, ja=standard]{bxjsbook}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -124,22 +124,22 @@
 
 \title{BS4 Book Template}
 \author{Hiroshi Suzuki}
-\date{2023-03-24}
+\date{2023-04-11}
 
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}[chapter]
 \theoremstyle{definition}
-\newtheorem{example}{Example}[section]
+\newtheorem{example}{Example}[chapter]
 \theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[section]
+\newtheorem{exercise}{Exercise}[chapter]
 \theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
@@ -147,18 +147,18 @@
 \maketitle
 
 {
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 }
 \hypertarget{about-this-book}{%
-\section{About this book}\label{about-this-book}}
+\chapter{About this book}\label{about-this-book}}
 
 Please read the last chapter for the usage and other information included in the original template in English.
 
 In the following we add comments in Japanese.
 
 \hypertarget{ux65e5ux672cux8a9eux7248ux30c6ux30f3ux30d7ux30ecux30fcux30c8ux306bux3064ux3044ux3066}{%
-\subsection{日本語版テンプレートについて}\label{ux65e5ux672cux8a9eux7248ux30c6ux30f3ux30d7ux30ecux30fcux30c8ux306bux3064ux3044ux3066}}
+\section{日本語版テンプレートについて}\label{ux65e5ux672cux8a9eux7248ux30c6ux30f3ux30d7ux30ecux30fcux30c8ux306bux3064ux3044ux3066}}
 
 \href{https://github.com/icu-hsuzuki/bs4_book_template}{GitHub レポジトリ} の、README を参照してください。
 
@@ -183,7 +183,7 @@ In the following we add comments in Japanese.
 \end{enumerate}
 
 \hypertarget{ux5099ux8003}{%
-\subsubsection{備考}\label{ux5099ux8003}}
+\subsection{備考}\label{ux5099ux8003}}
 
 \begin{itemize}
 \tightlist
@@ -196,7 +196,7 @@ In the following we add comments in Japanese.
 \end{itemize}
 
 \hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\chapter{Introduction}\label{introduction}}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
 
@@ -205,44 +205,44 @@ All chapters start with a first-level heading followed by your chapter title, li
 次のレベルは、節で、シャープ二つとなります。ラベルはつけなくても、節名などから、自動的に、作成されますが、日本語の場合には、特殊文字なども含まれるので、あとで、引用することを考えて、わたしは、少なくとも章については、英数でラベルをつけておくことにしています。
 
 \hypertarget{a-section}{%
-\subsection{A section}\label{a-section}}
+\section{A section}\label{a-section}}
 
 All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
 節番号などをつけたくない時は、次の行のようにします。
 
 \hypertarget{an-unnumbered-section}{%
-\subsubsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsubsection}{An unnumbered section}
+\subsection*{An unnumbered section}\label{an-unnumbered-section}}
+\addcontentsline{toc}{subsection}{An unnumbered section}
 
 Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
 
 \hypertarget{bookdown}{%
-\section{Bookdown}\label{bookdown}}
+\chapter{Bookdown}\label{bookdown}}
 
 \hypertarget{hello-bookdown}{%
-\subsection{Hello bookdown}\label{hello-bookdown}}
+\section{Hello bookdown}\label{hello-bookdown}}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
 
 \hypertarget{a-section-1}{%
-\subsubsection{A section}\label{a-section-1}}
+\subsection{A section}\label{a-section-1}}
 
 All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
 \hypertarget{an-unnumbered-section-1}{%
-\paragraph*{An unnumbered section}\label{an-unnumbered-section-1}}
-\addcontentsline{toc}{paragraph}{An unnumbered section}
+\subsubsection*{An unnumbered section}\label{an-unnumbered-section-1}}
+\addcontentsline{toc}{subsubsection}{An unnumbered section}
 
 Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
 
 \hypertarget{cross}{%
-\subsection{Cross-references}\label{cross}}
+\section{Cross-references}\label{cross}}
 
 Cross-references make it easier for your readers to find and link to elements in your book.
 
 \hypertarget{chapters-and-sub-chapters}{%
-\subsubsection{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
+\subsection{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
 
 There are two steps to cross-reference any heading:
 
@@ -270,7 +270,7 @@ There are two steps to cross-reference any heading:
 \end{enumerate}
 
 \hypertarget{captioned-figures-and-tables}{%
-\subsubsection{Captioned figures and tables}\label{captioned-figures-and-tables}}
+\subsection{Captioned figures and tables}\label{captioned-figures-and-tables}}
 
 Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
 
@@ -327,7 +327,7 @@ temperature & pressure\\
 \end{table}
 
 \hypertarget{parts}{%
-\subsection{Parts}\label{parts}}
+\section{Parts}\label{parts}}
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
@@ -338,30 +338,29 @@ Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (f
 Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
 
 \hypertarget{footnotes-and-citations}{%
-\subsection{Footnotes and citations}\label{footnotes-and-citations}}
+\section{Footnotes and citations}\label{footnotes-and-citations}}
 
 \hypertarget{footnotes}{%
-\subsubsection{Footnotes}\label{footnotes}}
+\subsection{Footnotes}\label{footnotes}}
 
 Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
 
 \hypertarget{citations}{%
-\subsubsection{Citations}\label{citations}}
+\subsection{Citations}\label{citations}}
 
 Reference items in your bibliography file(s) using \texttt{@key}.
 
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
+For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib). Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
 
 The \texttt{bs4\_book} theme makes footnotes appear inline when you click on them. In this example book, we added \texttt{csl:\ chicago-fullnote-bibliography.csl} to the \texttt{index.Rmd} YAML, and include the \texttt{.csl} file. To download a new style, we recommend: \url{https://www.zotero.org/styles/}
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
 \hypertarget{blocks}{%
-\subsection{Blocks}\label{blocks}}
+\section{Blocks}\label{blocks}}
 
 \hypertarget{equations}{%
-\subsubsection{Equations}\label{equations}}
+\subsection{Equations}\label{equations}}
 
 Here is an equation.
 
@@ -373,20 +372,18 @@ Here is an equation.
 You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
 
 \hypertarget{theorems-and-proofs}{%
-\subsubsection{Theorems and proofs}\label{theorems-and-proofs}}
+\subsection{Theorems and proofs}\label{theorems-and-proofs}}
 
 Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
 
 \begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
+\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have \[a^2 + b^2 = c^2\]
 \end{theorem}
 
 Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
 
 \hypertarget{callout-blocks}{%
-\subsubsection{Callout blocks}\label{callout-blocks}}
+\subsection{Callout blocks}\label{callout-blocks}}
 
 The \texttt{bs4\_book} theme also includes special callout blocks, like this \texttt{.rmdnote}.
 
@@ -411,20 +408,20 @@ You may also use: \texttt{.rmdcaution}, \texttt{.rmdimportant}, \texttt{.rmdtip}
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
 
 \hypertarget{sharing-your-book}{%
-\subsection{Sharing your book}\label{sharing-your-book}}
+\section{Sharing your book}\label{sharing-your-book}}
 
 \hypertarget{publishing}{%
-\subsubsection{Publishing}\label{publishing}}
+\subsection{Publishing}\label{publishing}}
 
 HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
 
 \hypertarget{pages}{%
-\subsubsection{404 pages}\label{pages}}
+\subsection{404 pages}\label{pages}}
 
 By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
 
 \hypertarget{metadata-for-sharing}{%
-\subsubsection{Metadata for sharing}\label{metadata-for-sharing}}
+\subsection{Metadata for sharing}\label{metadata-for-sharing}}
 
 Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
 
@@ -443,6 +440,7 @@ Or use:
 \end{Shaded}
 
 
+\renewcommand\bibname{参考文献}
   \bibliography{book.bib,packages.bib}
 
 \end{document}
